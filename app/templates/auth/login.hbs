@@ -1,0 +1,10 @@
+<h2>Login</h2>
+
+{{#if hasError}}
+<div>Error: {{errorMsg}}</div>
+{{/if}}
+<form {{action "authentifyUser" on="submit" preventDefault=true}}>
+	{{input value=userName placeholder="User name" size="30"}}
+	{{input value=password placeholder="Password" size="30"}}
+	<input type="submit" value="Submit" />
+</form>

@@ -1,3 +1,12 @@
-<h1>Welcome</h1>
+<h1>Welcome,
+{{#if authBroker.loggedIn}}
+{{authBroker.currentUser.user_name}}
+{{else}}
+guest
+{{/if}}</h1>
 
+{{#link-to "users"}}Users{{/link-to}} |
+{{#link-to "scientists"}}Scientists{{/link-to}} |
+{{#link-to "auth.login"}}Login{{/link-to}} |
+{{#link-to "auth.register"}}Register{{/link-to}}
 {{outlet}}
