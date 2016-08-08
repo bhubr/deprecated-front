@@ -1,3 +1,17 @@
 body {
 	font-family: sans-serif;
 }
+
+button,
+input[type=submit] {
+	padding: 2px;
+	background-color: #ccc;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+input[type=text] {
+	padding: 2px;
+	border: 1px solid #ddd;
+	border-radius: 2px;
+}

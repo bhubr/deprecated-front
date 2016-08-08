@@ -1,0 +1,19 @@
+<h2>List of Users</h2>
+
+<ul>
+  {{#each model as |user|}}
+    <li>{{user.fullName}} (born {{user.birthDate}})</li>
+  {{/each}}
+</ul>
+
+{{#if hasError}}
+<div>Error: {{errorMsg}}</div>
+{{/if}}
+<form {{action "createUser" on="submit" preventDefault=true}}>
+	{{input value=firstName placeholder="First name" size="30"}}
+	{{input value=lastName placeholder="Last name" size="30"}}
+	{{input value=birthDate placeholder="Birth date" size="30"}}
+	{{input value=password placeholder="Password" size="30"}}
+	{{input value=passwordConfirm placeholder="Password confirm" size="30"}}
+	<input type="submit" value="Submit" />
+</form>
