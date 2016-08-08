@@ -7,14 +7,6 @@ export default Ember.Service.extend({
 
   init() {
   	this._super(...arguments);
-  	return this.get('ajax').request('/auth/status')
-  	.then(result => {
-  	  console.log('ok', result.user);
-  	  this.login(result.user);
-  	})
-  	.catch(err => {
-  	  console.log('nok', err);
-  	});
   },
 
   login(user) {

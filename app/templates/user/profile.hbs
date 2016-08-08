@@ -1,0 +1,12 @@
+<h2>Profile</h2>
+
+{{#if hasError}}
+<div>Error: {{errorMsg}}</div>
+{{/if}}
+<form {{action "modifyUser" on="submit" preventDefault=true}}>
+	{{input value=model.userName placeholder="User name" size="30"}}
+	{{input value=model.firstName placeholder="First name" size="30"}}
+	{{input value=model.lastName placeholder="Last name" size="30"}}
+	
+	<input type="submit" value="Submit" />
+</form>

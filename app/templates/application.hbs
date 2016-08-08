@@ -7,6 +7,11 @@ guest
 
 {{#link-to "users"}}Users{{/link-to}} |
 {{#link-to "scientists"}}Scientists{{/link-to}} |
+{{#if authBroker.loggedIn}}
+{{#link-to "user.profile"}}Profile{{/link-to}} |
+<a href="#auth.logout">Logout</a>
+{{else}}
 {{#link-to "auth.login"}}Login{{/link-to}} |
 {{#link-to "auth.register"}}Register{{/link-to}}
+{{/if}}
 {{outlet}}
