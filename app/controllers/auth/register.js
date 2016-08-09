@@ -11,6 +11,7 @@ export default Ember.Controller.extend({
       }
       this.set('hasError', false);
       let newUser = this.get('store').createRecord('user', {
+        email: this.get('email'),
       	userName: this.get('userName'),
         firstName: this.get('firstName'),
         lastName: this.get('lastName'),

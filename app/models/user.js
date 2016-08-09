@@ -2,6 +2,7 @@ import DS from 'ember-data';
 import Ember from 'ember';
 
 export default DS.Model.extend({
+  email: DS.attr(),
   userName: DS.attr(),
   firstName: DS.attr(),
   lastName: DS.attr(),

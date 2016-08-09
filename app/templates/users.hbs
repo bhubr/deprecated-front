@@ -2,6 +2,6 @@
 
 <ul>
   {{#each model as |user|}}
-    <li>{{user.fullName}} (born {{user.birthDate}})</li>
+    <li>{{user.fullName}} (<a href="mailto:#">{{user.email}}</a>) (born {{user.birthDate}})</li>
   {{/each}}
 </ul>
